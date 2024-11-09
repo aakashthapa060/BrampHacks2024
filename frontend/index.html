@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./src/script.js"></script>
+</head>
+<body>
+    <h1>Pariwartan Tracker</h1>
+  
+    <!-- Map Div -->
+    <div id="map" style="height: 400px; width: 100%;"></div>
+    
+    <!-- Display selected locations -->
+    <p><strong>Start Location:</strong> <span id="start-location"></span></p>
+    <p><strong>Destination Location:</strong> <span id="destination-location"></span></p>
+  
+    <!-- Button to calculate footprint -->
+    <button type="button" onclick="calculateFootprint()">Calculate</button>
+  
+    <div id="results"></div>
+  
+    <!-- Load the Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFKaTJbwcNzB1tSZPp7wsNvCg7oYZxNh8&callback=initMap" async defer></script>
+</body>
+</html>
