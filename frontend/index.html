@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./src/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pariwartan Tracker</title>
+  <link rel="stylesheet" href="./css/map.css">
+  <script src="./src/script.js" defer></script>
 </head>
 <body>
+  <div class="wrapper">
     <h1>Pariwartan Tracker</h1>
-  
-    <!-- Map Div -->
-    <div id="map" style="height: 400px; width: 100%;"></div>
-    
-    <!-- Display selected locations -->
-    <p><strong>Start Location:</strong> <span id="start-location"></span></p>
-    <p><strong>Destination Location:</strong> <span id="destination-location"></span></p>
-  
-    <!-- Button to calculate footprint -->
-    <button type="button" onclick="calculateFootprint()">Calculate</button>
-  
-    <div id="results"></div>
-  
-    <!-- Load the Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFKaTJbwcNzB1tSZPp7wsNvCg7oYZxNh8&callback=initMap" async defer></script>
+
+    <!-- Autocomplete Search Section -->
+    <div>
+      <h3>Search Location with Autocomplete</h3>
+      <input type="text" id="startAutocomplete" placeholder="Search for start location">
+      <input type="text" id="destinationAutocomplete" placeholder="Search for destination location">
+    </div>
+
+    <!-- Transportation Method Selection -->
+    <div>
+      <h3>Select Transportation Method</h3>
+      <select id="transportationMethod">
+        <option value="bus">Bus</option>
+        <option value="car">Car</option>
+        <option value="walking">Walking</option>
+        <option value="cycling">Cycling</option>
+      </select>
+      <button class="btn-search" onclick="calculateFootprint()">Calculate Footprint</button>
+    </div>
+
+    <!-- Map Selection Section -->
+    <div>
+      <h3>Or Select Location on Map</h3>
+      <div id="map" style="height: 500px; width: 100%;"></div>
+      <p><strong>Start Location:</strong> <span id="start-location"></span></p>
+      <p><strong>Destination Location:</strong> <span id="destination-location"></span></p>
+    </div>
+
+    <!-- Result Display -->
+    <div id="results" style="display: none;">
+      <button id="close-btn" onclick="closeResults()">X</button>
+      <div id="result-content"></div>
+    </div>
+  </div>
+
+  <!-- Load Google Maps API with Places library for autocomplete -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFKaTJbwcNzB1tSZPp7wsNvCg7oYZxNh8&libraries=places&callback=initMap" async defer></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 const {Router} = require("express");
 const router = Router();
 
-const  {
-    calculate_distance
+const {
+    calculate_footprint
 } = require("../controllers/maps");
 
 
-router.route("/calulate").get(calculate_distance)
+router.route("/calculate").post(calculate_footprint);
 
 module.exports = router;

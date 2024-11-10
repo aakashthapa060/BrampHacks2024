@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f0f0;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #49a5490f;
+}
+.btn-search {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #49a549;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#results {
+     /* Initially hidden */
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 9999;
+    width: 80%; /* Make it responsive */
+    max-width: 600px; /* Set a max width */
+}
+
+.popup {
+    position: relative;
+    width: 100%;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 4px 7px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 50%;
+}
+
+#close-btn:hover {
+    background-color: darkred;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}

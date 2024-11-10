@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <h1>Login System</h1>
+
+
+    <!-- Login Form -->
+    <div id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="loginUsername" required>
+            <label for="password">Password:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- User Info -->
+    <div id="userInfo" style="display: none;">
+        <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script src="./src/login.js"></script>
+</body>
+</html>
